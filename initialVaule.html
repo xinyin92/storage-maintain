@@ -1,0 +1,124 @@
+<!-- initialVaule.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>期初值管理</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" href="css/storage.css">
+</head>
+<body>
+	<div class="wrap">
+		<div class="title">
+			<span>期初值录入</span>
+		</div>
+		<div class="date-set input-group col-md-3">
+			<div class="input-group-addon" for="initialDate">日期：</div>
+			<input type="text" class="form-control" id="initialDate">
+			<div class="input-group-btn">
+				<button type="" class="btn btn-default">确认</button>			
+			</div>
+		</div>
+		<div class="ini-prod">
+			<button class="btn btn-default" id="newTrBtn">添加</button>
+			<table class="table hide" id="iniProTabel">
+				<thead>
+					<tr>
+						<th>产品名</th>
+						<th>规格</th>
+						<th>单位</th>
+						<th>库存数量</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<span class="editable">点击编辑</span>
+							<select name="prod" id="slc-prod1" class="form-control hide">
+								<option value="1">产品1</option>
+								<option value="2">产品2</option>
+								<option value="3">产品3</option>
+								<option value="4">产品4</option>
+							</select>
+							<a class="confirmTd hide"><span class="glyphicon glyphicon-ok"></span></a>
+						<!-- 	<select name="prod" id="slc-prod2" class="form-control">
+								<option value="1">产品1</option>
+								<option value="2">产品2</option>
+								<option value="3">产品3</option>
+								<option value="4">产品4</option>
+							</select>
+							<select name="prod" id="slc-prod3" class="form-control">
+								<option value="1">产品1</option>
+								<option value="2">产品2</option>
+								<option value="3">产品3</option>
+								<option value="4">产品4</option>
+							</select> -->
+						</td>
+						<td>
+							<span class="editable">点击编辑</span>
+							<input type="text" class="form-control hide">
+							<a class="confirmTd hide"><span class="glyphicon glyphicon-ok"></span></a>
+						</td>
+						<td>
+							<span class="editable">点击编辑</span>
+							<input type="text" class="form-control hide">
+							<a class="confirmTd hide"><span class="glyphicon glyphicon-ok"></span></a>
+						</td>
+						<td>
+							<span class="editable">点击编辑</span>
+							<input type="text" class="form-control hide">
+							<a class="confirmTd hide"><span class="glyphicon glyphicon-ok"></span></a>
+						</td>
+						<td>							
+							<a class="removeTr"><span class="glyphicon glyphicon-remove"></span></a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<button class="btn btn-default hide" id="addConfirmBtn">确定</button>
+		</div>
+		<div class="prod-table">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>产品名</th>
+						<th>规格</th>
+						<th>单位</th>
+						<th>库存数量</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>258ml中国劲酒</td>
+						<td>1*6</td>
+						<td>件</td>
+						<td>200</td>
+					</tr>
+					<tr>
+						<td>520ml中国劲酒</td>
+						<td>1*6</td>
+						<td>件</td>
+						<td>150</td>
+					</tr>
+					<tr>
+						<td>125中国劲酒</td>
+						<td>1*12</td>
+						<td>件</td>
+						<td>130</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+
+		
+	</div>	
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-datetimepicker.js"></script>
+	<script src="js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+	<script src="js/storage.js"></script>
+</body>
+</html>

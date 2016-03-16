@@ -1,0 +1,159 @@
+<!-- inStorage.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>入库管理</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" href="css/storage.css">
+</head>
+<body>
+	<div class="wrap">
+		<div class="slc-group">
+			<div class="pro-slc clearfix">
+				<div class="input-group">
+					<div class="input-group-addon">产品类别</div>
+					<select name="" id="" class="form-control">
+						<option value="1">类别1</option>
+						<option value="2">类别2</option>
+						<option value="3">类别3</option>
+						<option value="4">类别4</option>
+					</select>				
+				</div>
+				<div class="input-group">
+					<div class="input-group-addon">产品名称</div>
+					<select name="" id="" class="form-control">
+						<option value="1">产品1</option>
+						<option value="2">产品2</option>
+						<option value="3">产品3</option>
+						<option value="4">产品4</option>
+					</select>				
+				</div>
+			</div>
+			<div class="date-picker clearfix">
+				<div class="input-group">
+					<div class="input-group-addon">开始时期</div>
+					<input type="text" class="form-control" id="startDate">				
+				</div>
+				<div class="input-group">
+					<div class="input-group-addon">结束日期</div>
+					<input type="text" class="form-control" id="endDate">			
+				</div>
+				<button class="btn btn-primary">查询</button>	
+			</div>
+		</div>
+
+		<div class="inSto">
+			<button class="btn btn-primary" id="batchConfirBtn" data-toggle="modal" 
+   data-target="#confirmModal">批量确认</button>
+			<table id="inStoTable" class="table"> 
+				<thead>
+					<tr>
+						<th>序号</th>
+						<th>产品名</th>
+						<th>规格</th>
+						<th>单位</th>
+						<th>入库数量</th>						
+						<th>发货时间</th>
+						<th>状态</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<input type="checkbox">1
+						</td>
+						<td>500ml53度毛铺酒</td>
+						<td>1*6</td>
+						<td>件</td>
+						<td>1000</td>
+						<td>2016-2-1</td>
+						<td>
+							<a class="confir-receive" data-toggle="modal" 
+   data-target="#confirmModal">待确认</a>
+						</td>
+
+					</tr>
+					<tr>
+						<td>
+							<input type="checkbox">2
+						</td>
+						<td>1.28Ll68度毛铺酒</td>
+						<td>1*6</td>
+						<td>件</td>
+						<td>3000</td>
+						<td>2016-2-1</td>
+						<td>
+							<a class="confir-receive" data-toggle="modal" 
+   data-target="#confirmModal">待确认</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="checkbox">3
+						</td>
+						<td>5L53度毛铺酒</td>
+						<td>1*15</td>
+						<td>件</td>
+						<td>100</td>
+						<td>2016-2-1</td>
+						<td>
+							<a class="confir-receive" data-toggle="modal" 
+   data-target="#confirmModal">待确认</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="checkbox">4
+						</td>
+						<td>500ml42度毛铺苦荞酒</td>
+						<td>1*6</td>
+						<td>件</td>
+						<td>500</td>
+						<td>2016-2-1</td>
+						<td>
+							<a class="confir-receive" data-toggle="modal" 
+   data-target="#confirmModal">待确认</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- 模态框（Modal） -->
+		<div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" 
+		   aria-labelledby="myModalLabel" aria-hidden="true">
+		   <div class="modal-dialog">
+		      <div class="modal-content">
+		         <div class="modal-header">
+		            <button type="button" class="close" 
+		               data-dismiss="modal" aria-hidden="true">
+		                  &times;
+		            </button>
+		            <h4 class="modal-title" id="myModalLabel">
+		               确认入库
+		            </h4>
+		         </div>
+		         <div class="modal-body">
+		            请在确认货物已入库后点击【确认】入库。
+		            <br>
+		            一旦确认无法更改状态。
+		         </div>
+		         <div class="modal-footer">
+		         	<button type="button" class="btn btn-primary">
+		               确认
+		            </button>
+		            <button type="button" class="btn btn-default" 
+		               data-dismiss="modal">取消
+		            </button>		            
+		         </div>
+		      </div><!-- /.modal-content -->
+		</div><!-- /.modal -->
+	</div>
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-datetimepicker.js"></script>
+	<script src="js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+	<script src="js/storage.js"></script>
+</body>
+</html>

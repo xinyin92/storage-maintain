@@ -1,0 +1,37 @@
+/*storage.css*/
+a{
+	cursor: pointer;
+}
+.wrap{
+	padding: 20px;
+}
+div.title{
+	padding-bottom: 20px;
+	width: 100%;
+	border-bottom: 1px dashed #676767;
+}
+div.title>span{
+	font-family: "微软雅黑";
+	font-size: 20px;
+	color: #438EB9;
+}
+div.date-set{
+	padding: 20px 0;
+}
+.editable{
+	border-bottom: 1px dashed #676767;
+	cursor: pointer;
+}
+.editable:hover{
+	
+}
+.pro-slc>.input-group,.date-picker>.input-group{
+	width: 400px;
+	float: left;
+	padding-right: 50px;
+	padding-bottom: 20px; 
+}
+
+#inStoTable>tbody tr td a{
+	text-decoration: underline;
+}
