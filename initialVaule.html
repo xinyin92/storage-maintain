@@ -35,13 +35,7 @@
 				<tbody>
 					<tr>
 						<td>
-							<span class="editable">点击编辑</span>
-							<select name="prod" id="slc-prod1" class="form-control hide">
-								<option value="1">产品1</option>
-								<option value="2">产品2</option>
-								<option value="3">产品3</option>
-								<option value="4">产品4</option>
-							</select>
+							<span class="pop-editable" title="选择产品名" data-container="body" data-toggle="popover" data-placement="right">点击编辑</span>
 							<a class="confirmTd hide"><span class="glyphicon glyphicon-ok"></span></a>
 						<!-- 	<select name="prod" id="slc-prod2" class="form-control">
 								<option value="1">产品1</option>
@@ -77,6 +71,27 @@
 					</tr>
 				</tbody>
 			</table>
+			<div id="popContent" class="hide">
+				<select name="prod" id="slc-prod1" class="form-control">
+					<option value="1">一级1</option>
+					<option value="2">一级2</option>
+					<option value="3">一级3</option>
+					<option value="4">一级4</option>
+				</select>
+				<select name="prod" id="slc-prod2" class="form-control">
+					<option value="1">二级1</option>
+					<option value="2">二级2</option>
+					<option value="3">二级3</option>
+					<option value="4">二级4</option>
+				</select>
+				<select name="prod" id="slc-prod3" class="form-control">
+					<option value="1">产品1</option>
+					<option value="2">产品2</option>
+					<option value="3">产品3</option>
+					<option value="4">产品4</option>
+				</select>
+				
+			</div>
 			<button class="btn btn-default hide" id="addConfirmBtn">确定</button>
 		</div>
 		<div class="prod-table">

@@ -13,7 +13,12 @@ $(function (){
         todayBtn: true
 	};
 
-
+	var popFormat={
+		html: true,
+		content: function(){
+			return $("#popContent").html();
+		}
+	};
 	/**
 	 * 期初值录入表添加一行
 	 * @param {String} tid [期初值录入表ID]
@@ -49,7 +54,17 @@ $(function (){
 		$("a.confirmTd").bind("click", confirmData);
 	}
 
-	
+	/**
+	 * 在popover中修改产品名
+	 */
+	function confirmPopData($popRoot){
+		var str;
+		var $prev=$(this).prev();
+		str=$prev.find("option:selected").text();
+		$popRoot.text(str);
+		
+	}
+
 	/**
 	 * 确认表格中编辑的数据
 	 */
@@ -59,7 +74,7 @@ $(function (){
 		var $editable=$(this).siblings(".editable");
 
 		if($prev[0].nodeName==="SELECT"){
-			str=$(this).prev().find("option:selected").text();
+			str=$prev.find("option:selected").text();
 		}else{
 			if ($prev.val()!=="") {
 				str=$prev.val();
@@ -84,11 +99,10 @@ $(function (){
 	// 	}		
 	// }
 
-	/////////////
+	////////////////
 	// 期初值录入 //
-	/////////////
+	////////////////
 
-	
 	//期初值录入日期设置
 	$("#initialDate").datetimepicker(dateFomat);
 	$("#initialDate").on("click",function(){
@@ -105,12 +119,23 @@ $(function (){
 			addTr("iniProTabel");
 			var $a=$("#iniProTabel>tbody>tr:last>td>a.removeTr");
 			$a.bind("click", removeTr);
-			$("span.editable").bind("click",editData);
+			// $("span.editable").bind("click",editData);
+			$(".pop-editable").popover(popFormat);			
+			$("[data-toggle='popover']").popover();
 		} 
 	});
 
 	//删除一行
 	$("a.removeTr").on("click", removeTr);
+
+	//点击编辑
+	//popover编辑产品	
+	$(".pop-editable").popover(popFormat);
+	$("[data-toggle='popover']").popover();
+	// $(".pop-editable").on("click",editData);
+
+	//表格上直接编辑数量
+	$("span.editable").on("click",editData);
 
 	//确认录入期初值
 	$("#addConfirmBtn").on("click",function () {
@@ -119,9 +144,9 @@ $(function (){
 	});
 
 
-	///////////
+	//////////////
 	// 入库管理 //
-	///////////
+	//////////////
 	
 	//查询日期范围设置
 	$("#startDate").datetimepicker(dateFomat);
@@ -133,6 +158,7 @@ $(function (){
 
 	$("#endDate").on("click",function(){
 			$(this).datetimepicker("setStartDate", $("#startDate").val());
+			$(this).datetimepicker("setEndDate", new Date());
 	});
 
 	//全选
